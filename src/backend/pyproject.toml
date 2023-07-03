@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ebisupy"
+version = "0.0.1"
+authors = [
+    {name = "Hanying Chen"},
+]
+description = "Tracke expenses easily and flexibly"
+readme = "README.rst"
+requires-python = ">=3.9"
+keywords = ["expense", "tracker"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pandas",
+    "numpy",
+    "plotly",
+    "jinja2",
+    "Flask",
+    "Flask_Cors"
+]
+[project.optional-dependencies]
+tests = [
+  'coverage',
+  'pytest',
+  'flake8',
+]
+dynamic = ["version"]
+
+[project.scripts]
+my-script = "my_package.module:function"
